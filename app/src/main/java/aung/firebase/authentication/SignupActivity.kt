@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -45,6 +46,8 @@ class SignupActivity : AppCompatActivity() {
                         startActivity(intent)
                         finish()
                     }else {
+                        // FirebaseAuthUserCollisionException: The email address is already in use by another account.
+                        Log.e("SignupActivity", "Registration Failed", task.exception)
                         Toast.makeText(this, "Registration Failed", Toast.LENGTH_LONG).show()
                     }
                 }

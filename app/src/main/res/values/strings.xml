@@ -18,4 +18,5 @@
     <string name="update_pass">Update Password</string>
     <string name="logout">Logout</string>
     <string name="new_password">Update Password</string>
+    <string name="google_btn">Login With Google</string>
 </resources>
